@@ -1,4 +1,4 @@
-import config
+from data import config
 import alpaca_trade_api as tradeapi
 import psycopg2
 import psycopg2.extras

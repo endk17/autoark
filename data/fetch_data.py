@@ -37,11 +37,13 @@ urls = [
     config.URL_IZRL 
 ]
 
-for url in urls:
-    print(f"Downloading latest version of {url.split('/')[6]}")
+for i in range(0, len(urls)):
+    url = urls[i]
+    
+    fileName = (url.split("/")[-1].split('_')[-2]) + "." + 'csv'
+    print(f"Downloading latest version of {fileName}")
 
     cfurl = scraper.get(url).content
-    name = url.split('/')[6]
 
-    with open(name, 'wb') as f:
+    with open(fileName, 'wb') as f:
         f.write(cfurl)
