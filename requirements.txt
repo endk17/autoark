@@ -1,0 +1,8 @@
+requests
+cloudscraper
+pathlib
+alpaca_trade_api
+psycopg2
+requests
+asyncpg
+aiohttp
